@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demystify LLM</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="sing.css">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="205x154" href="favicon.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+    <figure>
+        <figcaption>Demystifying Large Language Models in Healthcare AI</figcaption>
+        <audio loop controls>
+            <source src="data.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </figure>
+
+  <p>
+    The <strong>"Generative AI for Healthcare (Part 1): Demystifying Large Language Models"</strong> video from Stanford Online explains&nbsp;generative AI and large language models (LLMs) for healthcare professionals.
+    The hosts, clinical informaticists and emergency/internal medicine physicians, acknowledge the lack of accessible educational material and aim to empower viewers with knowledge for&nbsp;safe and effective implementation of these tools.
+  </p>
+  <p>
+    The video provides an&nbsp;intuitive understanding of LLMs, including their&nbsp;anatomy, training (pre-training and post-training), and how they generate responses. It traces the&nbsp;evolution of AI in healthcare through three epochs: symbolic AI, deep learning (traditional machine learning), and finally, generative AI and LLMs, offering&nbsp;heuristics to distinguish between them.
+  </p>
+  <p>
+    The discussion emphasizes how LLMs process information through&nbsp;tokenization, embeddings, and self-attention&nbsp;to create context-aware responses, and the importance of&nbsp;post-training techniques like supervised fine-tuning and reinforcement learning with human feedback&nbsp;in enhancing model performance and alignment.
+  </p>
+
+ <p>
+    The speakers in the YouTube video are <strong>Dong</strong> and <strong>Shivam</strong>. Both are clinical informaticists and physicians at Stanford — Dong specializing in emergency medicine and Shivam in internal medicine. Their work centers on deploying generative AI in clinical settings at Stanford Medicine and improving model safety for OpenAI as independent contractors with Greenlight. Dong was also a consultant for Glass Health.
+  </p>
+  <p>
+    Together, they aim to empower healthcare professionals with accessible knowledge for safely and effectively implementing generative AI.
+  </p>
+  <h2>Concepts Explained by Dong</h2>
+  <p>
+    Dong focused on challenges in using AI models and a framework for understanding the evolution and functioning of Large Language Models (LLMs) in healthcare.
+  </p>
+  <ul>
+    <li><strong>Challenges of Prompting or Prompt Engineering:</strong>
+      <ul>
+        <li>Difficulty understanding AI literature: Seminal papers (e.g., "Attention Is All You Need", 2017) are highly technical for clinicians lacking computer science backgrounds.</li>
+        <li>Lack of healthcare-specific prompting resources: Many online guides skip practical, in-depth examples suitable for clinicians.</li>
+        <li>Exponential pace of AI progress: AI publications increased from 272 (2014) to over 20,000 (2024) on PubMed, making it hard to keep up.</li>
+      </ul>
+    </li>
+    <li><strong>Three Epochs of AI in Healthcare</strong> (framework by Michael Howell and Karen De Salvo, Google):
+      <ul>
+        <li><strong>Epoch 1: Symbolic AI / Probabilistic Models (Rules-Based AI)</strong>
+          <ul>
+            <li>Timeline: ~1970 onward</li>
+            <li>Features: Logic-based, non-adaptive, do not learn new data</li>
+            <li>Examples: Clinical decision support tools, risk calculators, automated billing</li>
+          </ul>
+        </li>
+        <li><strong>Epoch 2: Deep Learning (Traditional Machine Learning)</strong>
+          <ul>
+            <li>Timeline: ~2010 onward</li>
+            <li>Features: Pattern recognition from millions of examples, typically single-task, blackbox models</li>
+            <li>Examples: Automated EKG/STEMI detection, AI deterioration models, radiology AI</li>
+          </ul>
+        </li>
+        <li><strong>Epoch 3: Large Language Models & Generative AI</strong>
+          <ul>
+            <li>Timeline: First described in 2017, public attention in 2022 (ChatGPT)</li>
+            <li>Features: General purpose, generative, multimodal, opaque in interpretability</li>
+            <li>Examples: Clinical knowledge retrieval, chart summarization, note drafting, ambient dictation</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><strong>Anatomy and Physiology of an LLM:</strong>
+      <ol>
+        <li><strong>Tokenization:</strong> Breaks input into tokens (approximate words).</li>
+        <li><strong>Static Embeddings:</strong> Tokens become vectors encoding meaning.</li>
+        <li><strong>Context-Aware Embeddings (Self-Attention):</strong> Model updates embedding based on full context.</li>
+        <li><strong>Next Token Prediction:</strong> Uses contextualized embeddings to predict subsequent tokens; "temperature" controls creativity.</li>
+        <li><strong>Iterative Generation:</strong> Output is generated one token at a time, enabling complex reasoning strategies such as chain-of-thought prompting.</li>
+      </ol>
+    </li>
+  </ul>
+  <h2>Concepts Explained by Shivam</h2>
+  <p>
+    Shivam described the evolution of OpenAI's models and crucial training techniques leading to ChatGPT's capabilities.
+  </p>
+  <ul>
+    <li><strong>Evolution of OpenAI Models:</strong>
+      <ul>
+        <li><strong>GPT-1 (2018):</strong> 117 million parameters, trained on unpublished books. Output resembled book-like prose, not clinically useful.</li>
+        <li><strong>GPT-2 (2019):</strong> 1.5 billion parameters; trained on internet text (Reddit-linked pages). Improved, but still not satisfactory for clinical answers.</li>
+        <li><strong>Scaling Laws (2020):</strong> Optimal performance comes from scaling compute, dataset size, and parameters together.</li>
+        <li><strong>GPT-3 (2020):</strong> 175 billion parameters, trained on refined Webtext 2 dataset. Responses were more coherent, yet lacking in expertise.</li>
+        <li><strong>GPT-3.5/ChatGPT (2022):</strong> Breakthrough owed to post-training, not further scaling. Finally delivered accurate medical information.</li>
+      </ul>
+    </li>
+    <li><strong>Post-Training Techniques:</strong>
+      <ul>
+        <li><strong>Supervised Fine-Tuning (SFT):</strong> Trains on curated input-output pairs, improving instruction following (e.g., summarization).</li>
+        <li><strong>Reinforcement Learning with Human Feedback (RLHF):</strong>
+          <ul>
+            <li>Humans rank output candidates by quality; model learns to prioritize better answers.</li>
+            <li>More experts (doctors/lawyers) are now involved in reviews.</li>
+            <li>Reward models and LLM "judges" further automate and scale alignment.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><strong>New Paradigm Shift (post-Sept 2024):</strong>
+      <ul>
+        <li><strong>Limits of Pre-training:</strong> Creating high-quality datasets is a bottleneck; new focus is on giving models more compute at inference (test-time scaling).</li>
+        <li><strong>Reasoning Models:</strong> Allow models deeper reasoning during response generation, greatly improving performance on difficult tasks (AIME, ARC AGI benchmarks).</li>
+        <li><strong>Future:</strong> GPT-4.5 will be the last non-reasoning model; focus shifts to scaling test-time reasoning.</li>
+      </ul>
+    </li>
+  </ul>
+  <h2>Summary</h2>
+  <p>
+    Dong and Shivam explained that LLMs are highly compressed numerical representations of collective human knowledge and reasoning, trained at enormous expense and compact enough to fit on small devices. This compressed "understanding" underpins new transformative technologies.
+  </p>
+
+
+
+
+
+    <div style="text-align: center; margin: 40px 0 0 0;">
+        <a href="https://youtu.be/ugvHCXCOmm4" target="_blank" rel="noopener">
+            Watch the original for Demystifying Large Language Models in Healthcare AI on YouTube
+        </a>
+    </div>
+
+
+</body>
+</html>
+
+
