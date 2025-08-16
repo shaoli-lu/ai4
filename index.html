@@ -14,13 +14,22 @@
 </head>
 <body>
 
-    <figure>
+   
         
-        <audio loop controls>
-            <source src="data.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </figure>
+<div class="audio-player">
+  <audio id="myAudio" controls>
+    <source src="data.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="controls">
+    <button type="button" onclick="rewindAudio()">⏪ 10s</button>
+    <button type="button" onclick="fastForwardAudio()">⏩ 10s</button>
+  </div>
+</div>
+
+
+
+  
   <h1>Generative AI for Healthcare (Part 1): Demystifying Large Language Models</h1>
   <p>
     The <strong>"Generative AI for Healthcare (Part 1): Demystifying Large Language Models"</strong> video from Stanford Online explains&nbsp;generative AI and large language models (LLMs) for healthcare professionals.
@@ -135,6 +144,7 @@
         </a>
     </div>
 
+<script src="audio-controls.js"></script>
 
 </body>
 </html>
